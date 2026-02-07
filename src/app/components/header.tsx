@@ -9,6 +9,7 @@ import Search from '../assets/search'
 import Save from '../assets/save'
 import Profile from '../assets/profile'
 import NavBar from './nav'
+import Link from 'next/link'
 const Header = () => {
   return (
     <header>
@@ -41,12 +42,12 @@ const Header = () => {
 
         <div className='bg-[#202B57] py-4  text-white'>
             <div className='w-max-w  flex justify-between items-center mx-auto'>
-                <div className='flex gap-4 items-center w-[25%]'>
+                <Link href={"/"} className='flex gap-4 items-center w-[25%]'>
                     <Image  src={Logo} width={60} alt="" />
                     <span className='text-white font-bold'>Qurilishda texnik me’yorlash
 va standartlashtirish 
 ilmiy-tadqiqot instituti</span>
-                </div>
+                </Link>
                 <div className='flex gap-4 items-center w-[25%]'>
 
                     <Search />
