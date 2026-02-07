@@ -16,14 +16,14 @@ const MaterialHeader = () => {
             <div className='flex gap-3 items-center'>
                 <span>Shahar / viloyat</span>
                 <Select defaultValue={"Barchasi"} style={{width:200}} >
-                    <Option>Barchasi</Option>
+                    <Option value ="all">Barchasi</Option>
                 </Select>
             </div>
 
             <div className='flex gap-3 items-center'>
                 <span>Tuman</span>
                 <Select defaultValue={"Barchasi"} style={{width:200}} >
-                    <Option>Barchasi</Option>
+                    <Option value="all">Barchasi</Option>
                 </Select>
             </div>
         </div>

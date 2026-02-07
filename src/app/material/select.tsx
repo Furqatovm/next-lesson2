@@ -14,7 +14,7 @@ function handleChange(value:string) {
 const MySelect = () => {
     
   return (
-    <Select defaultValue="Barcha bo'limlar" style={ButtonStyle}  onChange={handleChange}>
+    <Select defaultValue="a" style={ButtonStyle}  onChange={handleChange}>
       <Option value="a">Barcha bo'limlar</Option>
       <Option value="s">Barcha bo'limlar</Option>
       <Option value="b">Barcha bo'limlar</Option>

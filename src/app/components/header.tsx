@@ -17,7 +17,7 @@ const Header = () => {
             <div className='flex gap-4 items-center'>
                 <Location />
 
-                <select name="" id="" defaultValue={"toshkent"}>
+                <select name="dad" id="">
                     <option>Samarqand</option>
                     <option>Samarqand</option>
                     <option>Samarqand</option>
@@ -27,7 +27,7 @@ const Header = () => {
 
             <div className='flex gap-6 items-center'>
                     <span>Yo'riqnoma</span>
-                <select name="" id="" defaultValue={"uz"}>
+                <select name="" id="">
                     <option>uz</option>
                     <option>uz</option>
                     <option>uz</option>

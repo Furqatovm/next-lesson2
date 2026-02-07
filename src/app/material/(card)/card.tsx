@@ -1,16 +1,21 @@
-import React from 'react'
-
-import rasm from "../../../assets/photo.png"
-import Image from 'next/image'
+"use client"
 import { Button } from 'antd'
+import { CardType } from '../../../../@types';
+import { useRouter } from 'next/navigation';
 
-const Card = () => {
+export interface DataType  {
+  product:CardType
+}
+const Card = ({product}:DataType) => {
+
+  const router =useRouter()
+
   return (
-    <div className='flex gap-2 flex-col bg-white'>
-        <Image src={rasm} alt='something' />
+    <div onClick={() =>router.push(`/material/${product.id}`)} className='flex cursor-pointer gap-2 flex-col bg-white'>
+        <img src="/photo.png" alt='something' />
         <div className=' p-3 flex flex-col gap-4'>
         <div className='flex justify-between items-center'>
-            <span className='text-primary text-[12px] p-1 bg-[#1890FF33] rounded-sm font-semibold'>#02.02.02.01-1000</span>
+            <span className='text-primary text-[12px] p-1 bg-[#1890FF33] rounded-sm font-semibold'>{product.created_at}</span>
            <svg width={12} height={18} viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M3 1H9C9.53043 1 10.0391 1.21071 10.4142 1.58579C10.7893 1.96086 11 2.46957 11 3V17L6 14L1 17V3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1Z" stroke="#28366D" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
 </svg>
@@ -18,7 +23,7 @@ const Card = () => {
 
         </div>
 
-        <span className='text-primary text-[14px] font-semibold w-[80%]'>Удаляемый герметизирующий компаунд для повторного сращивания кабеля</span>
+        <span className='text-primary text-[14px] font-semibold w-[80%]'>{product.title}</span>
 
         <div className='flex justify-between items-center'>
             <Button style={{background:"#1890FF", borderColor:"#1890FF", color:"white"}}>Ko'rish</Button>
