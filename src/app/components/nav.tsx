@@ -6,7 +6,7 @@ const NavBar = () => {
   const pathname =usePathname()
     const links =[
       { name: "Materiallar", pathname: "/material", isActive: false },
-      { name: "mashina va mexanismlar", pathname: "/mashina-va-mexanismlar", isActive: false },
+      { name: "mashina va mexanismlar", pathname: "/mechanisms", isActive: false },
       { name: "Qurilish ishlari", pathname: "/qurilish-ishlari", isActive: false },
       { name: "Materiallar", pathname: "/materiallar-2", isActive: false },
       { name: "mashina va mexanismlar", pathname: "/mashina-va-mexanismlar-2", isActive: false },

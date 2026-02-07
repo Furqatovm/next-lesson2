@@ -6,7 +6,7 @@ const {Option} =Select
 
 const MaterialHeader = () => {
   return (
-    <div className='flex justify-between items-center my-8'>
+    <div className='flex justify-between items-center mt-10'>
         <div>
             <span className='text-primary text-[1.5rem] font-semibold block uppercase'>mahsulotlar</span>
             <span className='text-[#4B5055] text-[14px] '>2548 natija topildi</span>
