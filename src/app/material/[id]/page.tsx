@@ -3,6 +3,10 @@ import { DataType } from '../(card)/card'
 import { CardItems } from '@/app/constants'
 import { validateHeaderName } from 'http'
 import DetailBottom from './cards'
+import { Select } from 'antd'
+import ProductTable from './(table)/table'
+
+const {Option} =Select 
 
 export const  CardDetail = async ({ params }: { params: Promise<{ id: number }> }) => {
     const {id} =await params
@@ -10,8 +14,9 @@ export const  CardDetail = async ({ params }: { params: Promise<{ id: number }> 
     console.log(product)
 
   return (
-    <div className='w-max-w mx-auto grid grid-cols-[1fr_2fr] gap-10 my-10'>
-        <div className='bg-[#FFFFFF] p-3 rounded-md'>
+    <div>
+     <div  className=' grid grid-cols-[1fr_2fr] gap-10 my-10 w-max-w mx-auto'>
+     <div className='bg-[#FFFFFF] p-3 rounded-md'>
             <img src={product?.img} alt="" />
         </div>
 
@@ -76,10 +81,36 @@ export const  CardDetail = async ({ params }: { params: Promise<{ id: number }> 
                 {product?.description}
             </p>
         </div>
-       
+        
        <div className='col-span-full'>
         <DetailBottom />
        </div>
+     </div>
+
+
+     <div className='bg-[#F4F8FA]'>
+
+    <div className='w-max-w mx-auto'>
+    <div className='text-[14px] text-primary flex gap-6 items-center my-8'>
+            <div className='flex gap-3 items-center'>
+                <span>Shahar / viloyat</span>
+                <Select defaultValue={"Barchasi"} style={{width:200}} >
+                    <Option value ="all">Barchasi</Option>
+                </Select>
+            </div>
+
+            <div className='flex gap-3 items-center'>
+                <span>Tuman</span>
+                <Select defaultValue={"Barchasi"} style={{width:200}} >
+                    <Option value="all">Barchasi</Option>
+                </Select>
+            </div>
+        </div>
+<ProductTable />
+
+    </div>
+     </div>
+       
     </div>
   )
 }
